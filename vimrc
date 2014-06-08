@@ -27,3 +27,5 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set clipboard=unnamedplus
+set guioptions-=T
+colorscheme desert
