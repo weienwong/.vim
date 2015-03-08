@@ -30,3 +30,4 @@ set clipboard=unnamedplus
 set guioptions-=T
 colorscheme desert
 set backupdir=~/tmp
+autocmd vimenter * NERDTree
