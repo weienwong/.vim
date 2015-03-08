@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/weien/web_dev/angular-phonecat'
-let g:netrw_dirhist_2='/home/weien/.vim'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/weien/recruitmyfriends/rails/ippv1/app/models'
+let g:netrw_dirhist_2='/home/weien/c_life_v1/app/assets/javascripts'
+let g:netrw_dirhist_3='/home/weien/Dropbox/university/cs349/assignments/w39wong/newsApp_f14'
+let g:netrw_dirhist_4='/home/weien/Dropbox/university/cs349/assignments/w39wong/newsApp_f14/a4'
