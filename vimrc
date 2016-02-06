@@ -9,7 +9,7 @@ set background=dark
 filetype indent on
 syntax on
 set incsearch
-set ofu=syntaxcomplete#Complete
+"set ofu=syntaxcomplete#Complete
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
