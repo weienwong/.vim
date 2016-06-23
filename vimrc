@@ -31,7 +31,7 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'rails.vim'
 Plugin 'bundle'
 Plugin 'vim-airline/vim-airline'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,28 +48,32 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this lineet expandtab
 set expandtab
+set shiftwidth=2
+set softtabstop=2
 set autoindent
-set smartindent
-set cindent
-
 set number
 
-set background=dark
+if has('gui_running')
+  set background=dark
+else
+  set background=light
+endif
+
 filetype indent on
 syntax on
-"colorscheme solarized
+let g:solarized_termcolors=256
+colorscheme solarized
 "colorscheme monokai
 "colorscheme lucius 
 "colorscheme codeschool 
-colorscheme molokai
-
+"colorscheme molokai
 set incsearch
 execute pathogen#infect()
 filetype plugin indent on
 set clipboard=unnamedplus
 set guioptions-=T
 set guifont=Monospace\ 9
-map <C-n> :NERDTreeToggle<CR>
-
+" map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
+set foldmethod=syntax
