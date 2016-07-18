@@ -2,40 +2,41 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'commentary.vim'
-Plugin 'ctrlp.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdTree'
-Plugin 'rails.vim'
-Plugin 'bundle'
-Plugin 'vim-airline/vim-airline'
-" Plugin 'davidhalter/jedi-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"" alternatively, pass a path where Vundle should install plugins
+""call vundle#begin('~/some/path/here')
+"
+"" let Vundle manage Vundle, required
+"Plugin 'VundleVim/Vundle.vim'
+"
+"" The following are examples of different formats supported.
+"" Keep Plugin commands between vundle#begin/end.
+"" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+"" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+"" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+"" git repos on your local machine (i.e. when working on your own plugin)
+"" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'commentary.vim'
+"Plugin 'ctrlp.vim'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+"Plugin 'honza/vim-snippets'
+"Plugin 'scrooloose/nerdTree'
+"Plugin 'rails.vim'
+"Plugin 'bundle'
+"Plugin 'vim-airline/vim-airline'
+"" Plugin 'davidhalter/jedi-vim'
+"
+"" All of your Plugins must be added before the following line
+"call vundle#end()            " required
 filetype plugin indent on    " required
+filetype plugin on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -62,8 +63,8 @@ endif
 filetype indent on
 syntax on
 let g:solarized_termcolors=256
-colorscheme solarized
-"colorscheme monokai
+"colorscheme solarized
+colorscheme monokai
 "colorscheme lucius 
 "colorscheme codeschool 
 "colorscheme molokai
@@ -72,8 +73,10 @@ execute pathogen#infect()
 filetype plugin indent on
 set clipboard=unnamedplus
 set guioptions-=T
-set guifont=Monospace\ 9
-" map <C-n> :NERDTreeToggle<CR>
+"set guifont=Monospace\ 9
+map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
 set foldmethod=syntax
+let g:airline#extensions#tabline#enabled = 1
+let g:javascript_plugin_jsdoc = 1
