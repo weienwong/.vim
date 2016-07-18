@@ -31,7 +31,8 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'rails.vim'
 Plugin 'bundle'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'davidhalter/jedi-vim'
+" Wei-En's plugins
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,17 +54,17 @@ set softtabstop=2
 set autoindent
 set number
 
-if has('gui_running')
-  set background=dark
-else
-  set background=light
-endif
+" if has('gui_running')
+"   set background=dark
+" else
+"   set background=light
+" endif
 
 filetype indent on
 syntax on
 let g:solarized_termcolors=256
-colorscheme solarized
-"colorscheme monokai
+"colorscheme solarized
+colorscheme monokai
 "colorscheme lucius 
 "colorscheme codeschool 
 "colorscheme molokai
@@ -72,8 +73,10 @@ execute pathogen#infect()
 filetype plugin indent on
 set clipboard=unnamedplus
 set guioptions-=T
-set guifont=Monospace\ 9
-" map <C-n> :NERDTreeToggle<CR>
+set guifont=Monospace\ 8
+map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
 set foldmethod=syntax
+let g:airline#extensions#tabline#enabled = 1
+
