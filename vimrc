@@ -1,82 +1,50 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'commentary.vim'
-Plugin 'ctrlp.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdTree'
-Plugin 'rails.vim'
-Plugin 'bundle'
-Plugin 'vim-airline/vim-airline'
-" Wei-En's plugins
-Plugin 'davidhalter/jedi-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this lineet expandtab
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autoindent
 set number
 
+set background=dark
+" colorscheme molokai 
+" colorscheme monokai
+colorscheme solarized
+
 " if has('gui_running')
-"   set background=dark
 " else
-"   set background=light
 " endif
 
 filetype indent on
 syntax on
-let g:solarized_termcolors=256
-"colorscheme solarized
-colorscheme monokai
-"colorscheme lucius 
-"colorscheme codeschool 
+" let g:solarized_termcolors=256
 "colorscheme molokai
+" colorscheme monokai
+colorscheme lucius 
+" colorscheme codeschool 
 set incsearch
 execute pathogen#infect()
 filetype plugin indent on
 set clipboard=unnamedplus
 set guioptions-=T
-set guifont=Monospace\ 8
+set guifont=Monospace\ 9
 map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
 set foldmethod=syntax
+set foldlevelstart=20
+" set foldmethod=manual
 let g:airline#extensions#tabline#enabled = 1
 
+nnoremap <A-up> :m .-2<CR>==
+nnoremap <A-down> :m .+1<CR>==
+inoremap <A-down> <Esc>:m .+1<CR>==gi
+inoremap <A-up> <Esc>:m .-2<CR>==gi
+vnoremap <A-down> :m '>+1<CR>gv=gv
+vnoremap <A-up> :m '<-2<CR>gv=gv
+
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
