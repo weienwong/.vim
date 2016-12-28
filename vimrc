@@ -10,12 +10,11 @@ set number
 set background=dark
 " colorscheme molokai 
 " colorscheme monokai
-colorscheme solarized
+" colorscheme solarized
 
 " if has('gui_running')
 " else
 " endif
-
 filetype indent on
 syntax on
 " let g:solarized_termcolors=256
@@ -48,3 +47,4 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+let g:javascript_plugin_jsdoc = 1
