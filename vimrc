@@ -2,46 +2,64 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 filetype plugin indent on    " required
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set number
+set cursorline
+set hlsearch
+set showcmd
+set wildmenu
+set lazyredraw
+set showmatch
 
-set background=dark
-" colorscheme molokai 
-" colorscheme monokai
-" colorscheme solarized
+syntax on
+filetype indent on
+
+set laststatus=2
+set foldmethod=syntax
+
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+
+nnoremap <space> za
+set foldmethod=indent
+
+set incsearch
+set hlsearch
+
+" Solarized Vim settings
+" let g:solarized_termcolors=256
 
 " if has('gui_running')
+"   set background=dark
 " else
+"   set background=light
 " endif
-filetype indent on
-syntax on
-" let g:solarized_termcolors=256
-"colorscheme molokai
+
+" colorscheme solarized
+
+colorscheme molokai
 " colorscheme monokai
-colorscheme lucius 
+" colorscheme lucius 
 " colorscheme codeschool 
-set incsearch
+
 execute pathogen#infect()
 filetype plugin indent on
 set clipboard=unnamedplus
 set guioptions-=T
-set guifont=Monospace\ 9
 map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set laststatus=2
-set foldmethod=syntax
-set foldlevelstart=20
 " set foldmethod=manual
 let g:airline#extensions#tabline#enabled = 1
 
-nnoremap <A-up> :m .-2<CR>==
-nnoremap <A-down> :m .+1<CR>==
-inoremap <A-down> <Esc>:m .+1<CR>==gi
-inoremap <A-up> <Esc>:m .-2<CR>==gi
-vnoremap <A-down> :m '>+1<CR>gv=gv
-vnoremap <A-up> :m '<-2<CR>gv=gv
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 inoremap <F9> <C-O>za
 nnoremap <F9> za
