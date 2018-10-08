@@ -28,22 +28,12 @@ set foldmethod=indent
 
 set incsearch
 set hlsearch
+set termguicolors 
 
-" Solarized Vim settings
-" let g:solarized_termcolors=256
-
-" if has('gui_running')
-"   set background=dark
-" else
-"   set background=light
-" endif
-
-" colorscheme solarized
-
+" colorscheme gruvbox
 colorscheme molokai
-" colorscheme monokai
+ " colorscheme monokai
 " colorscheme lucius 
-" colorscheme codeschool 
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -51,18 +41,16 @@ set clipboard=unnamedplus
 set guioptions-=T
 map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-" set foldmethod=manual
 let g:airline#extensions#tabline#enabled = 1
 
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+"CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
-let g:javascript_plugin_jsdoc = 1
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
