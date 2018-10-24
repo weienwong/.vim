@@ -41,6 +41,7 @@ set clipboard=unnamedplus
 set guioptions-=T
 map <C-n> :NERDTreeToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/vim-surround
 let g:airline#extensions#tabline#enabled = 1
 
 "CtrlP settings
