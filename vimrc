@@ -13,7 +13,7 @@ set wildmenu
 set lazyredraw
 set showmatch
 
-syntax on
+syntax enable 
 filetype indent on
 
 set laststatus=2
@@ -30,10 +30,12 @@ set incsearch
 set hlsearch
 set termguicolors 
 
-" colorscheme gruvbox
-colorscheme molokai
- " colorscheme monokai
+set background=dark
+ colorscheme gruvbox
+" colorscheme molokai
+" colorscheme monokai
 " colorscheme lucius 
+" colorscheme solarized
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -57,11 +59,3 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
