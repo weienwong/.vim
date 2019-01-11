@@ -31,11 +31,13 @@ set hlsearch
 set termguicolors 
 
 set background=dark
- colorscheme gruvbox
-" colorscheme molokai
+" colorscheme gruvbox
+colorscheme molokai
 " colorscheme monokai
 " colorscheme lucius 
+" let g:solarized_termcolors=256
 " colorscheme solarized
+
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -59,3 +61,11 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
