@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/wei/.vim'
+let g:netrw_dirhist_2='/Users/wei/.vim'
+let g:netrw_dirhist_3='/Users/wei/.vim/pack'
+let g:netrw_dirhist_4='/Users/wei/.vim/pack/dist'
+let g:netrw_dirhist_5='/Users/wei/.vim/pack/dist/start'
+let g:netrw_dirhist_6='/Users/wei/.vim'
