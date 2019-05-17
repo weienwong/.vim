@@ -10,6 +10,11 @@ set wildmenu
 set lazyredraw
 set showmatch
 
+" GUI related settings
+set guioptions -=T
+set guioptions -=m
+
+
 syntax enable 
 filetype indent on
 
@@ -25,11 +30,10 @@ set foldmethod=indent
 
 set incsearch
 set hlsearch
+set clipboard=unnamed
 
 set background=dark
 colorscheme gruvbox
-" colorscheme monokai
-" colorscheme lucius 
 
 " use native package loading
 
