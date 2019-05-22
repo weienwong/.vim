@@ -19,6 +19,7 @@ set incsearch
 set hlsearch
 set clipboard=unnamed
 set background=dark
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " GUI related settings
 set guioptions -=T
@@ -35,4 +36,22 @@ colorscheme gruvbox
 
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+"syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ultisnips settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
