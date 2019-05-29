@@ -21,6 +21,14 @@ set clipboard=unnamed
 set background=dark
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+syntax enable
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
+filetype indent on
+set autoindent
+
 " GUI related settings
 set guioptions -=T
 set guioptions -=m
@@ -55,3 +63,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" python syntax setting
+let python_highlight_all = 1
