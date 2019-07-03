@@ -46,3 +46,7 @@ let NERDTreeShowHidden=1
 
 " python syntax setting
 let python_highlight_all = 1
+
+" node.vim setting
+autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
+
