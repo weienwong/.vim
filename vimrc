@@ -23,30 +23,21 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 syntax enable
 set tabstop=4
 set shiftwidth=4
-set expandtab
-set number
-filetype indent on
-set autoindent
 
-" GUI related settings
-set guioptions -=T
-set guioptions -=m
-
-syntax enable 
 filetype indent on
 filetype plugin indent on    
 filetype plugin on    
 
 colorscheme gruvbox
 
-"use native package loading
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-
-" python syntax setting
-let python_highlight_all = 1
-
-" node.vim setting
-autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
-
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+      autocmd!
+      autocmd VimEnter * :Vexplore
+augroup END
