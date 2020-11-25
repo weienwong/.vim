@@ -1,9 +1,0 @@
-[submodule "/home/wei/.vim/pack/vendor/start/nerdtree"]
-	path = /home/wei/.vim/pack/vendor/start/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-[submodule "/home/wei/.vim/pack/dist/start/vim-airline"]
-	path = /home/wei/.vim/pack/dist/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "/home/wei/.vim/pack/dist/start/vim-airline-themes"]
-	path = /home/wei/.vim/pack/dist/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
