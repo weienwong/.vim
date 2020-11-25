@@ -1,6 +1,3 @@
-[submodule "/home/wei/.vim/bundle/ctrlp.vim"]
-	path = /home/wei/.vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "/home/wei/.vim/pack/vendor/start/nerdtree"]
 	path = /home/wei/.vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
