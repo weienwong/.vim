@@ -18,7 +18,7 @@ set incsearch
 set hlsearch
 set clipboard=unnamed
 set background=dark
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=8 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 syntax enable
 set tabstop=4
@@ -35,10 +35,16 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-" run: 
-" git submodule update --init after cloning
-" git submodule foreach git pull origin master
 
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
 
+set autowrite
+
+" vim-go 
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
